@@ -45,7 +45,7 @@ export default function Contact() {
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-      // Helpful production debugging
+      // Debugging information remains available in the browser console.
       console.log('EmailJS configuration:', {
         serviceId,
         templateId,
@@ -53,9 +53,7 @@ export default function Contact() {
       })
 
       if (!serviceId || !templateId || !publicKey) {
-        throw new Error(
-          'Email service configuration is missing. Please contact the administrator.'
-        )
+        throw new Error('Email service configuration is missing.')
       }
 
       const templateParams = {
@@ -80,15 +78,15 @@ export default function Contact() {
       setSent(true)
       setForm(initialForm)
     } catch (err) {
+      // Technical error is available in the browser console for debugging.
       console.error('EmailJS error:', err)
       console.error('EmailJS status:', err?.status)
       console.error('EmailJS text:', err?.text)
       console.error('EmailJS message:', err?.message)
 
+      // Do NOT expose EmailJS's technical error to website visitors.
       setError(
-        err?.text ||
-          err?.message ||
-          'We were unable to send your enquiry. Please try again or contact us directly by email.'
+        'We were unable to send your enquiry. Please try again or contact us directly by email.'
       )
     } finally {
       setSending(false)
@@ -104,7 +102,7 @@ export default function Contact() {
           </span>
 
           <h1 className="ct-hero__title">
-            Get in touch with Councel.
+            Get in touch with Counsel.
           </h1>
 
           <p className="ct-hero__lede">
@@ -310,3 +308,4 @@ export default function Contact() {
     </>
   )
 }
+
