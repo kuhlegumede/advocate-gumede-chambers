@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="footer__base">
         <div className="container footer__base-inner">
           <p>&copy; {year} Adv Gumede Chambers. All rights reserved.</p>
-          <p>This website is for general information only and does not constitute legal advice.</p>
+          <p className='footer-engineered'>This website is engineered by Qwabe Solutions.</p>
         </div>
       </div>
     </footer>
