@@ -30,6 +30,6 @@ Thumbs.db
 *.temp
 
 #Email Service
-VITE_EMAILJS_SERVICE_ID=your_actual_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_actual_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_actual_public_key
+VITE_EMAILJS_SERVICE_ID=service_rvu9bmh
+VITE_EMAILJS_TEMPLATE_ID=__ejs-test-mail-service__
+VITE_EMAILJS_PUBLIC_KEY=uT0R16e3IBJuLe7_l
