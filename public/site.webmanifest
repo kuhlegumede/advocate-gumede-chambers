@@ -1,0 +1,17 @@
+{
+  "name": "Advocate Gumede",
+  "short_name": "Adv Gumede",
+  "description": "Advocate M.N Gumede — Advocate of the High Court of South Africa.",
+  "lang": "en-ZA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import podium from '../assets/adv-gumede-podium.jpg'
 import portrait from '../assets/adv-gumede-portrait.jpg'
 import './Home.css'
+import SEO from '../components/SEO.jsx'
 
 const stats = [
   { value: '2018', label: 'Admitted as an Advocate' },
@@ -31,6 +32,11 @@ const practiceAreas = [
 export default function Home() {
   return (
     <>
+    <SEO
+       title="Advocate of the High Court"
+       description="Advocate M.N Gumede is an Advocate of the High Court of South Africa providing professional legal advocacy in criminal, civil and commercial litigation in Umtata, Eastern Cape."
+       path="/"
+    />
       {/* ---------- Hero ---------- */}
       <section className="hero">
         <div className="container hero__grid">

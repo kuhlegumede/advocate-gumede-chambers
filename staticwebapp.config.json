@@ -3,6 +3,9 @@
     "rewrite": "/index.html",
     "exclude": [
       "/images/*",
+      "/robots.txt",
+      "/sitemap.xml",
+      "/site.webmanifest",
       "/*.{css,scss,js,png,jpg,jpeg,gif,svg,ico,webp}"
     ]
   }

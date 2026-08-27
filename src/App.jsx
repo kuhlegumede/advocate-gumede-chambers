@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
+import StructuredData from './components/StructuredData.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -17,6 +18,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <>
+      <StructuredData />
       <ScrollToTop />
       <Navbar />
       <main>

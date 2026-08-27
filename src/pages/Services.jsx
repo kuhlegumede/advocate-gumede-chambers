@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Services.css'
+import SEO from '../components/SEO.jsx'
 
 const services = [
   {
@@ -37,6 +38,11 @@ const services = [
 export default function Services() {
   return (
     <>
+    <SEO
+       title="Legal Services"
+       description="Adv Gumede Chambers provides legal advocacy in criminal law, civil litigation, commercial and contract disputes, family law, labour matters and property disputes in Mthatha (Umtata), Eastern Cape."
+       path="/services"
+    />
       <section className="svc-hero">
         <div className="container">
           <span className="eyebrow eyebrow--light">Practice Areas</span>

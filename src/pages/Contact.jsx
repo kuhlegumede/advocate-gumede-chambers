@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
+import SEO from '../components/SEO.jsx'
 
 const matterTypes = [
   'Criminal Law',
@@ -95,6 +96,11 @@ export default function Contact() {
 
   return (
     <>
+    <SEO
+       title="Contact M.N Gumede Chambers"
+       description="Advocate M.N Gumede, an Advocate of the High Court of South Africa based at 45 Leeds Road, Umtata, Eastern Cape."
+       path="/contact"
+    />
       <section className="ct-hero">
         <div className="container">
           <span className="eyebrow eyebrow--light">
