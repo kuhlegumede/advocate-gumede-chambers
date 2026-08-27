@@ -140,7 +140,7 @@ export default function Home() {
         <div className="container cta__inner">
           <div>
             <span className="eyebrow eyebrow--light">Enquiries Welcome</span>
-            <h2 className="cta__title">Discuss your matter with Council.</h2>
+            <h2 className="cta__title">Discuss your matter with Councel.</h2>
           </div>
           <div className="cta__actions">
             <Link to="/contact" className="btn btn-primary">

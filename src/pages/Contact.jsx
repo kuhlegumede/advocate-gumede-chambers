@@ -41,26 +41,54 @@ export default function Contact() {
     setError('')
 
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          phone: form.phone,
-          matter_type: form.matterType,
-          message: form.message,
-          to_email: 'advgumede26@gmail.com',
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+      // Helpful production debugging
+      console.log('EmailJS configuration:', {
+        serviceId,
+        templateId,
+        publicKeyPresent: Boolean(publicKey),
+      })
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          'Email service configuration is missing. Please contact the administrator.'
+        )
+      }
+
+      const templateParams = {
+        from_name: form.name,
+        from_email: form.email,
+        phone: form.phone,
+        matter_type: form.matterType,
+        message: form.message,
+      }
+
+      console.log('Sending enquiry:', templateParams)
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
       )
+
+      console.log('EmailJS success:', response)
 
       setSent(true)
       setForm(initialForm)
     } catch (err) {
       console.error('EmailJS error:', err)
+      console.error('EmailJS status:', err?.status)
+      console.error('EmailJS text:', err?.text)
+      console.error('EmailJS message:', err?.message)
+
       setError(
-        'We were unable to send your enquiry. Please try again or contact us directly by email.'
+        err?.text ||
+          err?.message ||
+          'We were unable to send your enquiry. Please try again or contact us directly by email.'
       )
     } finally {
       setSending(false)
@@ -76,7 +104,7 @@ export default function Contact() {
           </span>
 
           <h1 className="ct-hero__title">
-            Get in touch with Council.
+            Get in touch with Councel.
           </h1>
 
           <p className="ct-hero__lede">
@@ -190,7 +218,6 @@ export default function Contact() {
               onSubmit={handleSubmit}
             >
               <div className="ct-form__row">
-
                 <label>
                   Full name
 
@@ -216,11 +243,9 @@ export default function Contact() {
                     disabled={sending}
                   />
                 </label>
-
               </div>
 
               <div className="ct-form__row">
-
                 <label>
                   Phone number
 
@@ -252,7 +277,6 @@ export default function Contact() {
                     ))}
                   </select>
                 </label>
-
               </div>
 
               <label>
