@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="footer__col">
           <span className="eyebrow eyebrow--light">Direct Contact</span>
           <p>
-            <a href="tel:+27827687765">082 961 8609</a>
+            <a href="tel:+27829618609">082 961 8609</a>
             <br />
             <a href="mailto:advgumede26@gmail.com">
               advgumede26@gmail.com
