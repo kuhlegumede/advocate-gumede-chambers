@@ -64,7 +64,7 @@ export default function Footer() {
           </p>
 
           <p className="footer-engineered">
-            This website is engineered by Qwabe Solutions.
+            This website is engineered by K.N Gumede.
           </p>
         </div>
       </div>
