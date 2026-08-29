@@ -64,7 +64,7 @@ export default function Footer() {
           </p>
 
           <p className="footer-engineered">
-            This website is engineered by K.N Gumede.
+            This website is engineered by K.N.G.
           </p>
         </div>
       </div>
