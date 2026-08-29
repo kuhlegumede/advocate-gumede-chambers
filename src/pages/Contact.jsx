@@ -97,7 +97,7 @@ export default function Contact() {
   return (
     <>
     <SEO
-       title="Contact M.N Gumede Chambers"
+       title="Contact an Advocate in Mthatha | Adv Gumede Chambers"
        description="Advocate M.N Gumede, an Advocate of the High Court of South Africa based at 45 Leeds Road, Umtata, Eastern Cape."
        path="/contact"
     />
@@ -130,13 +130,13 @@ export default function Contact() {
               <h3>Advocate Gumede Chambers</h3>
 
               <p className="ct-info__addr">
-                Abantu Group Of Advocates
-                <br />
-                45 Leeds Road
-                <br />
-                Umtata, Eastern Cape
-                <br />
-                5099, South Africa
+                 Abantu Group Of Advocates
+                   <br />
+                 45 Leeds Road
+                    <br />
+                 Mthatha (Umtata), Eastern Cape
+                     <br />
+                 5099, South Africa
               </p>
             </div>
 
@@ -178,8 +178,8 @@ export default function Contact() {
 
             <div className="ct-info__map">
               <iframe
-                title="Gumede Chambers location — 45 Leeds Street, Umtata"
-                src="https://www.google.com/maps?q=45+Leeds+Street,+Mthatha,+5099,+South+Africa&output=embed"
+                title="N. Gumede Chambers location — 45 Leeds Road, Mthatha"
+                src="https://www.google.com/maps?q=45+Leeds+Road,+Mthatha,+5099,+South+Africa&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen

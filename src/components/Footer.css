@@ -63,7 +63,13 @@
   flex-direction: column;
   gap: 10px;
 }
-
+.footer__logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
 .footer__base {
   border-top: 1px solid rgba(168, 130, 60, 0.2);
 }

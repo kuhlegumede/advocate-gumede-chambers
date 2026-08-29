@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/adv-gumede-logo.png'
 import './Navbar.css'
 
 const links = [
@@ -14,15 +15,27 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
+
     window.addEventListener('scroll', onScroll)
+
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
-        <NavLink to="/" className="nav__brand" onClick={() => setOpen(false)}>
-          <span className="nav__monogram">NG</span>
+
+        <NavLink
+          to="/"
+          className="nav__brand"
+          onClick={() => setOpen(false)}
+        >
+          <img
+            src={logo}
+            alt="Adv Gumede Chambers"
+            className="nav__logo"
+          />
+
           <span className="nav__wordmark">
             <strong>Advocate Gumede Chambers</strong>
             <em>Advocate of the High Court</em>
@@ -35,12 +48,15 @@ export default function Navbar() {
               key={l.to}
               to={l.to}
               end={l.to === '/'}
-              className={({ isActive }) => `nav__link ${isActive ? 'nav__link--active' : ''}`}
+              className={({ isActive }) =>
+                `nav__link ${isActive ? 'nav__link--active' : ''}`
+              }
               onClick={() => setOpen(false)}
             >
               {l.label}
             </NavLink>
           ))}
+
           <a href="tel:+27829618609" className="btn btn-primary nav__cta">
             082 961 8609
           </a>

@@ -34,22 +34,21 @@ export default function Home() {
     <>
     <SEO
        title="Advocate of the High Court"
-       description="Advocate M.N Gumede is an Advocate of the High Court of South Africa providing professional legal advocacy in criminal, civil and commercial litigation in Umtata, Eastern Cape."
+       description="Advocate M.N Gumede is an Advocate of the High Court of South Africa based in Mthatha(Umtata), Eastern Cape, providing professional legal advocacy in criminal, civil and commercial litigation matters."
        path="/"
     />
       {/* ---------- Hero ---------- */}
       <section className="hero">
         <div className="container hero__grid">
           <div className="hero__copy">
-            <span className="eyebrow eyebrow--light">Advocate Gumede Chambers &middot; Umtata</span>
+            <span className="eyebrow eyebrow--light">Advocate Gumede Chambers &middot; Mthatha, Eastern Cape</span>
             <h1 className="hero__title">
               Advocacy built on
               <br />
               preparation, and <em>presence</em>.
             </h1>
             <p className="hero__lede">
-              Nhlanhla Gumede is an Advocate of the High Court of South Africa, briefed in
-              civil, criminal, and labour related matters from chambers in Umtata, Eastern Cape.
+               Nhlanhla Gumede is an Advocate of the High Court of South Africa, based in Mthatha (Umtata), Eastern Cape. Adv Gumede Chambers accepts instructions in criminal, civil, labour, commercial and related legal matters.
             </p>
             <div className="hero__actions">
               <Link to="/contact" className="btn btn-primary">
@@ -94,7 +93,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <div className="plate-mark eyebrow">What We Handle</div>
-            <h2 className="section-head__title">A general chambers, with particular strength in criminal, civil work and labour related matters.</h2>
+            <h2 className="section-head__title">Legal advocacy in criminal, civil, labour and commercial matters.</h2>
           </div>
 
           <div className="areas-grid">
@@ -124,10 +123,11 @@ export default function Home() {
             <div className="plate-mark eyebrow">About Advocate Gumede</div>
             <h2>Grounded in the Eastern Cape, briefed across its courts.</h2>
             <p>
-              A graduate of Walter Sisulu University in Mthatha, Nhlanhla Gumede has practised
-              as an Advocate of the High Court of South Africa since 2018. His chambers on
-              45 Leeds Road, Umtata, take instructions in criminal, civil, labour and a broad range of
-              other matters, appearing on behalf of clients across all parts of South Africa.
+              Advocate Gumede Chambers, located at 45 Leeds Road, Mthatha,Eastern Cape and  accepts
+              instructions in criminal, civil, labour, commercial, family and
+              property-related matters. Advocate Gumede Chambers can be approached by instructing
+              attorneys and, where appropriate, members of the public seeking
+              professional legal representation.
             </p>
             <p>
               Every matter is approached with the same discipline: thorough preparation of the

@@ -39,13 +39,13 @@ export default function Services() {
   return (
     <>
     <SEO
-       title="Legal Services"
-       description="Adv Gumede Chambers provides legal advocacy in criminal law, civil litigation, commercial and contract disputes, family law, labour matters and property disputes in Mthatha (Umtata), Eastern Cape."
+       title="Legal Services in Mthatha | N. Gumede Chambers"
+       description="Legal services from N. Gumede Chambers in Mthatha (Umtata), Eastern Cape, including criminal law, civil litigation, labour matters, commercial disputes, family law and property matters."
        path="/services"
     />
       <section className="svc-hero">
         <div className="container">
-          <span className="eyebrow eyebrow--light">Practice Areas</span>
+          <span className="eyebrow eyebrow--light">Legal Services · Mthatha, Eastern Cape</span>
           <h1 className="svc-hero__title">Matters we are briefed to handle.</h1>
           <p className="svc-hero__lede">
             Advocate Gumede Chambers takes instructions across a broad range of criminal, labour related and civil matters.
