@@ -1,73 +1,60 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE_URL = 'https://advocategumede.co.za/'
-
 export default function StructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'LegalService',
-        '@id': `${SITE_URL}/#legalservice`,
-        name: 'M.N Gumede Chambers',
-        url: SITE_URL,
+        '@id': 'https://advocategumede.co.za/#legalservice',
+        name: 'Advocate Gumede Chambers',
+        url: 'https://advocategumede.co.za/',
         description:
-          'Advocate M.N Gumede is an Advocate of the High Court of South Africa based in Mthatha(Umtata), Eastern Cape, providing professional legal advocacy in criminal, civil and commercial litigation.',
-        areaServed: {
-          '@type': 'Country',
-          name: 'South Africa',
+          'Legal services provided by Advocate M.N. Gumede, Advocate of the High Court of South Africa, in Mthatha (Umtata), Eastern Cape.',
+        telephone: '+27 82 961 8609',
+
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '45 Leeds Road',
+          addressLocality: 'Mthatha',
+          addressRegion: 'Eastern Cape',
+          postalCode: '5099',
+          addressCountry: 'ZA',
+        },
+
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Mthatha',
+          },
+          {
+            '@type': 'AdministrativeArea',
+            name: 'Eastern Cape',
+          },
+        ],
+      },
+
+      {
+        '@type': 'Person',
+        '@id': 'https://advocategumede.co.za/#person',
+        name: 'M.N. Gumede',
+        jobTitle: 'Advocate',
+        url: 'https://advocategumede.co.za/',
+        worksFor: {
+          '@id':
+            'https://advocategumede.co.za/#legalservice',
         },
       },
+
       {
         '@type': 'WebSite',
-        '@id': `${SITE_URL}/#website`,
-        url: SITE_URL,
-        name: 'Advocate Gumede',
-        telephone: '+27829618609',
-        email: 'advgumede26@gmail.com',
-        image: 'https://advocategumede.co.za/favicon.svg',
+        '@id': 'https://advocategumede.co.za/#website',
+        url: 'https://advocategumede.co.za/',
+        name: 'Advocate M.N. Gumede',
         description:
-          'Advocate M.N Gumede — Advocate of the High Court of South Africa based in Mthatha(Umtata), Eastern Cape.',
+          'Legal services and information for Advocate M.N. Gumede in Mthatha, Eastern Cape.',
         inLanguage: 'en-ZA',
-         address: {
-      '@type': 'PostalAddress',
-      streetAddress: '45 Leeds Road',
-      addressLocality: 'Mthatha',
-      addressRegion: 'Eastern Cape',
-      postalCode: '5099',
-      addressCountry: 'ZA',
-    },
       },
-    ],
-     areaServed: [
-      {
-        '@type': 'City',
-        name: 'Mthatha',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Eastern Cape',
-      },
-      {
-        '@type': 'Country',
-        name: 'South Africa',
-      },
-    ],
-
-    founder: {
-      '@type': 'Person',
-      name: 'Nhlanhla Gumede',
-      jobTitle: 'Advocate of the High Court of South Africa',
-    },
-
-    knowsAbout: [
-      'Criminal Law',
-      'Civil Litigation',
-      'Commercial Law',
-      'Contract Disputes',
-      'Family Law',
-      'Labour Law',
-      'Property Law',
     ],
   }
 
